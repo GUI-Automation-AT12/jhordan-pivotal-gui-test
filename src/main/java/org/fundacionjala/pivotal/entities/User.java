@@ -3,7 +3,10 @@ package org.fundacionjala.pivotal.entities;
 import org.fundacionjala.core.utils.IdGenerator;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
+import java.util.function.Supplier;
 
 public class User {
 
@@ -14,6 +17,7 @@ public class User {
     private String startPage;
     private String timeZone;
     private String defaultStoryType;
+    private Set<String> updatedFields = new HashSet<>();
 
     // My profile photo
 
@@ -68,20 +72,40 @@ public class User {
         return initials;
     }
 
-    /**
-     * Process all information stored for a User as a map.
-     * @param userInformation
-     */
-    public void processInformation(final Map<String, String> userInformation) {
-        HashMap<String, Runnable> strategyMap = composeMapStrategy(userInformation);
-        userInformation.keySet().forEach(key -> strategyMap.get(key).run());
+    public Set<String> getUpdatedFields() {
+        return updatedFields;
     }
 
-    private HashMap<String, Runnable> composeMapStrategy(final Map<String, String> userInformation) {
+    private HashMap<String, Runnable> composeStrategySetter(final Map<String, String> userInformation) {
         HashMap<String, Runnable> strategyMap = new HashMap<>();
         strategyMap.put("User name", () -> setUserName(userInformation.get("User name")));
         strategyMap.put("Name", () -> setName(userInformation.get("Name")));
         strategyMap.put("Initials", () -> setInitials(userInformation.get("Initials")));
         return strategyMap;
+    }
+
+    /**
+     * Process all information stored for a User as a map.
+     * @param userInformation
+     */
+    public void processInformation(final Map<String, String> userInformation) {
+        HashMap<String, Runnable> strategyMap = composeStrategySetter(userInformation);
+        userInformation.keySet().forEach(key -> strategyMap.get(key).run());
+        updatedFields = userInformation.keySet();
+    }
+
+    private HashMap<String, Supplier<String>> composeStrategyGetter() {
+        HashMap<String, Supplier<String>> strategyMap = new HashMap<>();
+        strategyMap.put("User name", () -> getUserName());
+        strategyMap.put("Name", () -> getName());
+        strategyMap.put("Initials", () -> getInitials());
+        return strategyMap;
+    }
+
+    public Map<String, String> getUpdatedInfo() {
+        Map<String, String> userInfo = new HashMap<>();
+        HashMap<String, Supplier<String>> strategyMap = composeStrategyGetter();
+        updatedFields.forEach(field -> userInfo.put(field, strategyMap.get(field).get()));
+        return userInfo;
     }
 }

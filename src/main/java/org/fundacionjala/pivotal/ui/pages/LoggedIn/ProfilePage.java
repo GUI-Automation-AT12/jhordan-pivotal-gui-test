@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.function.Supplier;
 
 public class ProfilePage extends BaseLoggedInPage {
 
@@ -77,6 +79,21 @@ public class ProfilePage extends BaseLoggedInPage {
         userInfoMap.put("Name", getProfileNameAsString());
         userInfoMap.put("Initials", getProfileInitialsAsString());
         return userInfoMap;
+    }
+
+    public Map<String, String> getUserInformationAsMap(final Set<String> fields) {
+        Map userInfoMap = new HashMap<String, String>();
+        HashMap<String, Supplier<String>> strategyMap = composeStrategyGetterMap();
+        fields.forEach(field -> userInfoMap.put(field, strategyMap.get(field).get()));
+        return userInfoMap;
+    }
+
+    private HashMap<String, Supplier<String>> composeStrategyGetterMap() {
+        HashMap<String, Supplier<String>> strategyMap = new HashMap<>();
+        strategyMap.put("User name", () -> getProfileUserNameAsString());
+        strategyMap.put("Name", () -> getProfileNameAsString());
+        strategyMap.put("Initials", () -> getProfileInitialsAsString());
+        return strategyMap;
     }
 
     public String getUserManagementMenuTitleAsString() {
