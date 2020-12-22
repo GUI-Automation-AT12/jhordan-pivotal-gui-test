@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.fundacionjala.pivotal.junit.ProjectTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-21T23:36:40" hostname="DESKTOP-0TPPK4K" time="37.587">
+  <properties/>
+  <testcase name="createProjectTest" classname="org.fundacionjala.pivotal.junit.ProjectTest" time="37.587"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1608593801560	geckodriver	INFO	Listening on 127.0.0.1:30183
+1608593802771	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Casa\\AppData\\Local\\Temp\\rust_mozprofileX0nveH"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1608593808179	Marionette	INFO	Listening on port 54143
+1608593808571	Marionette	WARN	TLS certificate errors will be ignored for this session
+dic 21, 2020 4:36:48 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1608593833625	Marionette	INFO	Stopped listening on port 54143
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+]]></system-err>
+</testsuite>
