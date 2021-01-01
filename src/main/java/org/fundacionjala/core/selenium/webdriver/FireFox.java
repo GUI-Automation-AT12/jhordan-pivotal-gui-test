@@ -1,14 +1,9 @@
 package org.fundacionjala.core.selenium.webdriver;
 
 import io.github.bonigarcia.wdm.FirefoxDriverManager;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.CapabilityType;
 
-import java.io.File;
-import java.util.HashMap;
 
 import static io.github.bonigarcia.wdm.DriverManagerType.FIREFOX;
 

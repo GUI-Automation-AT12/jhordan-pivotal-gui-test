@@ -50,6 +50,10 @@ public class ProfilePage extends BaseLoggedInPage {
         return getProfileInformationAsString(profileName);
     }
 
+    public String getTextFromChangesNotifier() {
+        return Interactioner.getTextFromWebElement(changesNotification);
+    }
+
     private String getProfileInitialsAsString() {
         return getProfileInformationAsString(profileInitials);
     }
@@ -65,10 +69,6 @@ public class ProfilePage extends BaseLoggedInPage {
     public EditProfileForm getEditProfileForm() {
         clickEditProfileButton();
         return editProfileForm;
-    }
-
-    public String getTextFromChangesNotification() {
-        return Interactioner.getTextFromWebElement(changesNotification);
     }
 
     public Map<String, String> getUserInformationAsMap() {

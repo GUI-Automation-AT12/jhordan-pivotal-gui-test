@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import static io.github.bonigarcia.wdm.DriverManagerType.EDGE;
 
 /**
- * This class creates a instance Chrome.
+ * This class creates a instance of Edge.
  *
  * @author Jhordan Soto
  * @version 1.0
