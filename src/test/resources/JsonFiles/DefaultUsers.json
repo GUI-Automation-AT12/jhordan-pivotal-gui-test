@@ -1,0 +1,22 @@
+[
+  {
+    "user": {
+      "Alias": "Editable User",
+      "Email": "esotomercado@gmail.com",
+      "Password": "Secret123",
+      "User name": "userNotEdited",
+      "Name": "User Not Edited",
+      "Initials": "UNE"
+    }
+  },
+  {
+    "user": {
+      "Alias": "Other User",
+      "Email": "jhnmi0@gmail.com",
+      "Password": "other123",
+      "User name": "userOther",
+      "Name": "Other User",
+      "Initials": "OU"
+    }
+  }
+]

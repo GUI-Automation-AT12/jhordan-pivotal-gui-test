@@ -50,6 +50,10 @@ public class PropertiesFileReader {
         return localProperty;
     }
 
+    /**
+     * Nethod that closes the reader.
+     * @throws EnvironmentReadingException
+     */
     private void closeReader() throws EnvironmentReadingException {
         try {
             reader.close();
