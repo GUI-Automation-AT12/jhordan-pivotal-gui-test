@@ -1,0 +1,20 @@
+[
+    {
+        "alias": "Editable User",
+        "email": "esotomercado@gmail.com",
+        "password": "Secret123",
+        "userName": "userNewEdited",
+        "name": "User New Edited",
+        "initials": "EE",
+        "token": "2acbeb846e57b2038eab8804ac56774c"
+    },
+    {
+        "alias": "Standard User",
+        "email": "esotomercado@gmail.com",
+        "password": "Secret123",
+        "userName": "standardUser",
+        "name": "Standard User",
+        "initials": "SU",
+        "token": "2acbeb846e57b2038eab8804ac56774c"
+    }
+]

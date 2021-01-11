@@ -1,62 +1,105 @@
-org/fundacionjala/core/selenium/webdriver/Chrome.java
- org.fundacionjala.core.selenium.webdriver.Chrome
-org/fundacionjala/core/config/EnvironmentProperties.java
- org.fundacionjala.core.config.EnvironmentProperties
-org/fundacionjala/pivotal/ui/pages/BasePage.java
- org.fundacionjala.pivotal.ui.pages.BasePage
-org/fundacionjala/core/utils/IdGenerator.java
- org.fundacionjala.core.utils.IdGenerator
-org/fundacionjala/core/selenium/WebDriverFactory.java
- org.fundacionjala.core.selenium.WebDriverFactory
-org/fundacionjala/core/selenium/webdriver/IDriver.java
- org.fundacionjala.core.selenium.webdriver.IDriver
-org/fundacionjala/core/selenium/WebDriverManager.java
- org.fundacionjala.core.selenium.WebDriverManager
-org/fundacionjala/core/selenium/webdriver/Edge.java
- org.fundacionjala.core.selenium.webdriver.Edge
-org/fundacionjala/pivotal/entities/User.java
- org.fundacionjala.pivotal.entities.User
-org/fundacionjala/core/throwables/EnvironmentReadingException.java
- org.fundacionjala.core.throwables.EnvironmentReadingException
-org/fundacionjala/core/config/PropertiesFileReader.java
- org.fundacionjala.core.config.PropertiesFileReader
-org/fundacionjala/pivotal/config/PivotalProperties.java
- org.fundacionjala.pivotal.config.PivotalProperties
-org/fundacionjala/core/selenium/DriverProperties.java
- org.fundacionjala.core.selenium.DriverProperties
-org/fundacionjala/pivotal/entities/Project.java
- org.fundacionjala.pivotal.entities.Project
-org/fundacionjala/pivotal/ui/WebTransporter.java
- org.fundacionjala.pivotal.ui.WebTransporter
-org/fundacionjala/core/selenium/webdriver/FireFox.java
- org.fundacionjala.core.selenium.webdriver.FireFox
-org/fundacionjala/pivotal/ui/component/profile/ChangeSaved.java
- org.fundacionjala.pivotal.ui.component.profile.ChangeSaved
+org/fundacionjala/pivotal/entities/EntitiesParser.java
+ org.fundacionjala.pivotal.entities.EntitiesParser
+ org.fundacionjala.pivotal.entities.EntitiesParser$1
+ org.fundacionjala.pivotal.entities.EntitiesParser$2
 org/fundacionjala/pivotal/ui/popups/CreateProjectPopup.java
  org.fundacionjala.pivotal.ui.popups.CreateProjectPopup
-org/fundacionjala/pivotal/ui/component/profile/EditProfileForm.java
- org.fundacionjala.pivotal.ui.component.profile.EditProfileForm
+org/fundacionjala/core/throwables/PropertiesReadingException.java
+ org.fundacionjala.core.throwables.PropertiesReadingException
 org/fundacionjala/pivotal/ui/pages/Init/InitialPage.java
  org.fundacionjala.pivotal.ui.pages.Init.InitialPage
-org/fundacionjala/core/selenium/Interactioner.java
- org.fundacionjala.core.selenium.Interactioner
-org/fundacionjala/pivotal/ui/pages/LoggedIn/ProfilePage.java
- org.fundacionjala.pivotal.ui.pages.LoggedIn.ProfilePage
+org/fundacionjala/pivotal/entities/Workspace.java
+ org.fundacionjala.pivotal.entities.Workspace
 org/fundacionjala/pivotal/ui/pages/LoggedIn/ProjectSettingsPage.java
  org.fundacionjala.pivotal.ui.pages.LoggedIn.ProjectSettingsPage
-org/fundacionjala/pivotal/ui/pages/Init/LoginStep2Page.java
- org.fundacionjala.pivotal.ui.pages.Init.LoginStep2Page
-org/fundacionjala/pivotal/ui/pages/LoggedIn/DashboardPage.java
- org.fundacionjala.pivotal.ui.pages.LoggedIn.DashboardPage
-org/fundacionjala/pivotal/ui/pages/LoggedIn/ProjectPage.java
- org.fundacionjala.pivotal.ui.pages.LoggedIn.ProjectPage
 org/fundacionjala/pivotal/ui/pages/Init/LoginStep1Page.java
  org.fundacionjala.pivotal.ui.pages.Init.LoginStep1Page
-org/fundacionjala/pivotal/ui/pages/LoggedIn/ProjectsSummaryPage.java
- org.fundacionjala.pivotal.ui.pages.LoggedIn.ProjectsSummaryPage
+org/fundacionjala/pivotal/ui/WebTransporter.java
+ org.fundacionjala.pivotal.ui.WebTransporter
+org/fundacionjala/pivotal/entities/Story.java
+ org.fundacionjala.pivotal.entities.Story
+org/fundacionjala/core/config/TestExecutionProperties.java
+ org.fundacionjala.core.config.TestExecutionProperties
+org/fundacionjala/pivotal/ui/component/profile/EditProfileForm.java
+ org.fundacionjala.pivotal.ui.component.profile.EditProfileForm
+org/fundacionjala/core/selenium/Interactioner.java
+ org.fundacionjala.core.selenium.Interactioner
+org/fundacionjala/core/config/PropertiesSetter.java
+ org.fundacionjala.core.config.PropertiesSetter
+org/fundacionjala/pivotal/api/utils/ApiAuthentication.java
+ org.fundacionjala.pivotal.api.utils.ApiAuthentication
+org/fundacionjala/pivotal/entities/Projects.java
+ org.fundacionjala.pivotal.entities.Projects
+org/fundacionjala/core/selenium/browsers/browserTypes/EdgeBrowser.java
+ org.fundacionjala.core.selenium.browsers.browserTypes.EdgeBrowser
+org/fundacionjala/pivotal/ui/pages/BasePage.java
+ org.fundacionjala.pivotal.ui.pages.BasePage
 org/fundacionjala/pivotal/ui/pages/LoggedIn/BaseLoggedInPage.java
  org.fundacionjala.pivotal.ui.pages.LoggedIn.BaseLoggedInPage
-org/fundacionjala/pivotal/ui/component/common/TopMenu.java
- org.fundacionjala.pivotal.ui.component.common.TopMenu
+org/fundacionjala/pivotal/entities/User.java
+ org.fundacionjala.pivotal.entities.User
 org/fundacionjala/pivotal/ui/component/UserMenu.java
  org.fundacionjala.pivotal.ui.component.UserMenu
+org/fundacionjala/pivotal/ui/component/profile/ChangeSaved.java
+ org.fundacionjala.pivotal.ui.component.profile.ChangeSaved
+org/fundacionjala/core/config/EnvironmentProperties.java
+ org.fundacionjala.core.config.EnvironmentProperties
+org/fundacionjala/pivotal/ui/pages/LoggedIn/ProfilePage.java
+ org.fundacionjala.pivotal.ui.pages.LoggedIn.ProfilePage
+org/fundacionjala/core/utils/IdGenerator.java
+ org.fundacionjala.core.utils.IdGenerator
+org/fundacionjala/core/selenium/browsers/Browser.java
+ org.fundacionjala.core.selenium.browsers.Browser
+org/fundacionjala/core/selenium/browsers/BrowserParser.java
+ org.fundacionjala.core.selenium.browsers.BrowserParser
+ org.fundacionjala.core.selenium.browsers.BrowserParser$1
+org/fundacionjala/pivotal/ui/pages/LogedOut/LoginStep1Page.java
+ org.fundacionjala.pivotal.ui.pages.LogedOut.LoginStep1Page
+org/fundacionjala/pivotal/ui/pages/LoggedIn/DashboardPage.java
+ org.fundacionjala.pivotal.ui.pages.LoggedIn.DashboardPage
+org/fundacionjala/core/selenium/browsers/browserTypes/FirefoxBrowser.java
+ org.fundacionjala.core.selenium.browsers.browserTypes.FirefoxBrowser
+org/fundacionjala/pivotal/ui/pages/LoggedIn/ProjectPage.java
+ org.fundacionjala.pivotal.ui.pages.LoggedIn.ProjectPage
+org/fundacionjala/core/throwables/EnvironmentReadingException.java
+ org.fundacionjala.core.throwables.EnvironmentReadingException
+org/fundacionjala/pivotal/ui/pages/LoggedIn/ProjectsSummaryPage.java
+ org.fundacionjala.pivotal.ui.pages.LoggedIn.ProjectsSummaryPage
+org/fundacionjala/pivotal/api/client/RequestManager.java
+ org.fundacionjala.pivotal.api.client.RequestManager
+org/fundacionjala/pivotal/config/PivotalProperties.java
+ org.fundacionjala.pivotal.config.PivotalProperties
+org/fundacionjala/pivotal/context/Context.java
+ org.fundacionjala.pivotal.context.Context
+org/fundacionjala/core/utils/PropertiesFileReader.java
+ org.fundacionjala.core.utils.PropertiesFileReader
+org/fundacionjala/core/selenium/browsers/browserTypes/IBrowser.java
+ org.fundacionjala.core.selenium.browsers.browserTypes.IBrowser
+org/fundacionjala/core/selenium/GuiInteractioner.java
+ org.fundacionjala.core.selenium.GuiInteractioner
+org/fundacionjala/pivotal/ui/pages/LoggedIn/WorkspaceSettingsPage.java
+ org.fundacionjala.pivotal.ui.pages.LoggedIn.WorkspaceSettingsPage
+org/fundacionjala/core/config/PropertiesFileReader.java
+ org.fundacionjala.core.config.PropertiesFileReader
+org/fundacionjala/core/selenium/BrowserFactory.java
+ org.fundacionjala.core.selenium.BrowserFactory
+org/fundacionjala/pivotal/ui/pages/LogedOut/LoginStep2Page.java
+ org.fundacionjala.pivotal.ui.pages.LogedOut.LoginStep2Page
+org/fundacionjala/pivotal/ui/component/TopMenu.java
+ org.fundacionjala.pivotal.ui.component.TopMenu
+org/fundacionjala/pivotal/ui/pages/Init/LoginStep2Page.java
+ org.fundacionjala.pivotal.ui.pages.Init.LoginStep2Page
+org/fundacionjala/pivotal/api/utils/EndpointProcessor.java
+ org.fundacionjala.pivotal.api.utils.EndpointProcessor
+org/fundacionjala/core/selenium/WebDriverManager.java
+ org.fundacionjala.core.selenium.WebDriverManager
+org/fundacionjala/pivotal/ui/pages/LoggedIn/WorkspacePage.java
+ org.fundacionjala.pivotal.ui.pages.LoggedIn.WorkspacePage
+org/fundacionjala/pivotal/ui/component/EditProfileForm.java
+ org.fundacionjala.pivotal.ui.component.EditProfileForm
+org/fundacionjala/core/selenium/browsers/browserTypes/ChromeBrowser.java
+ org.fundacionjala.core.selenium.browsers.browserTypes.ChromeBrowser
+org/fundacionjala/pivotal/ui/popups/CreateWorkspacePopUp.java
+ org.fundacionjala.pivotal.ui.popups.CreateWorkspacePopUp
+org/fundacionjala/pivotal/ui/component/common/TopMenu.java
+ org.fundacionjala.pivotal.ui.component.common.TopMenu

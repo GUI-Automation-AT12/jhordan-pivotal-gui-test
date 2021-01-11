@@ -1,70 +1,74 @@
 package org.fundacionjala.core.selenium;
 
+import org.fundacionjala.core.selenium.browsers.Browser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public final class WebDriverManager {
-    // Content WebDriverManager.
+
     private static WebDriverManager webDriverManager;
+    private static String browserName;
+    private final WebDriver webDriver;
+    private final WebDriverWait webDriverWait;
 
-    // Content WebDriver.
-    private WebDriver webDriver;
-
-    // Content WebDriverWait.
-    private WebDriverWait webDriverWait;
 
     /**
-     * this method is used for initializes the variables.
-     */
-    private WebDriverManager() {
-        initializes();
-    }
-
-    /**
-     * This method is used for instantiate the WebDriverManager class.
-     *
-     * @return a webDriverManager.
+     * If webDriverManager object was not created before it create a new one,
+     * otherwise return the created.
+     * @return webDriverManager
      */
     public static WebDriverManager getInstance() {
-        if (webDriverManager == null || webDriverManager.webDriver == null) {
-            webDriverManager = new WebDriverManager();
+        if (webDriverManager == null) {
+            try {
+                webDriverManager = new WebDriverManager();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return webDriverManager;
     }
 
-    /**
-     * This method is used for initializes the variables.
-     */
-    private void initializes() {
-        this.webDriver = WebDriverFactory.getWebDriver(DriverProperties.getInstance().getBrowser());
-        this.webDriver.manage().window().maximize();
-        this.webDriver.manage().timeouts().implicitlyWait(DriverProperties.getInstance().getImplicitWaitTime(),
-                TimeUnit.SECONDS);
-        webDriverWait = new WebDriverWait(webDriver, DriverProperties.getInstance().getExplicitWaitTime(),
-                DriverProperties.getInstance().getSleepWait());
+    private WebDriverManager() throws IOException {
+        Browser browser = BrowserFactory.getDriverProps(browserName);
+        webDriver = BrowserFactory.getWebDriver(browserName);
+        webDriver.manage().window().maximize();
+        webDriver.manage().timeouts().
+            implicitlyWait(Long.parseLong(browser.getImplicitWaitingSeconds()), TimeUnit.SECONDS);
+        webDriverWait = new WebDriverWait(webDriver, Long.parseLong(browser.getExplicitWaitingSeconds()),
+                            Long.parseLong(browser.getSleepingTimeMills()));
     }
 
+    /**
+     * Sets the browser to run the tests, providing its name.
+     * @param browser name of the browser
+     */
+    public static void setBrowserName(final String browser) {
+        WebDriverManager.browserName = browser;
+    }
 
     /**
-     * Uses to get a WebDriver.
-     *
-     * @return a WebDriver.
+     * Return the webDriver of the singleInstance.
+     * @return webDriver
      */
     public WebDriver getWebDriver() {
         return webDriver;
     }
 
     /**
-     * Uses to get a WebDriverWait.
-     *
-     * @return a WebDriverWait.
+     * Return the webDriverWait of the singleInstance.
+     * @return webDriverWait
      */
     public WebDriverWait getWebDriverWait() {
         return webDriverWait;
     }
 
+    /**
+     * Quits the webDriver and set webDriverManager single instance as null.
+     */
     public void quit() {
-        webDriver.quit();
+        this.webDriver.quit();
+        webDriverManager = null;
     }
 }

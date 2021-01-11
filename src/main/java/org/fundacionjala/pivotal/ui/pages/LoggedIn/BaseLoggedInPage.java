@@ -1,6 +1,6 @@
 package org.fundacionjala.pivotal.ui.pages.LoggedIn;
 
-import org.fundacionjala.pivotal.ui.component.common.TopMenu;
+import org.fundacionjala.pivotal.ui.component.TopMenu;
 import org.fundacionjala.pivotal.ui.pages.BasePage;
 
 public class BaseLoggedInPage extends BasePage {

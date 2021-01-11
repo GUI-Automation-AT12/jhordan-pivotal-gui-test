@@ -1,14 +1,24 @@
 org/fundacionjala/pivotal/cucumber/steps/NavigationSteps.java
  org.fundacionjala.pivotal.cucumber.steps.NavigationSteps
-org/fundacionjala/pivotal/cucumber/steps/LoginSteps.java
- org.fundacionjala.pivotal.cucumber.steps.LoginSteps
-org/fundacionjala/pivotal/cucumber/steps/CreateProjectStep.java
- org.fundacionjala.pivotal.cucumber.steps.CreateProjectStep
-org/fundacionjala/pivotal/junit/ProjectTest.java
- org.fundacionjala.pivotal.junit.ProjectTest
-org/fundacionjala/pivotal/hooks/CommonHooks.java
- org.fundacionjala.pivotal.hooks.CommonHooks
-org/fundacionjala/pivotal/junit/LoginPivotalTest.java
- org.fundacionjala.pivotal.junit.LoginPivotalTest
+org/fundacionjala/pivotal/runner/Runner.java
+ org.fundacionjala.pivotal.runner.Runner
 org/fundacionjala/pivotal/cucumber/steps/ProfileSteps.java
  org.fundacionjala.pivotal.cucumber.steps.ProfileSteps
+org/fundacionjala/pivotal/cucumber/steps/StorySteps.java
+ org.fundacionjala.pivotal.cucumber.steps.StorySteps
+org/fundacionjala/pivotal/cucumber/steps/ProjectSteps.java
+ org.fundacionjala.pivotal.cucumber.steps.ProjectSteps
+org/fundacionjala/pivotal/cucumber/hooks/ProjectHooks.java
+ org.fundacionjala.pivotal.cucumber.hooks.ProjectHooks
+org/fundacionjala/pivotal/cucumber/hooks/UserHooks.java
+ org.fundacionjala.pivotal.cucumber.hooks.UserHooks
+org/fundacionjala/pivotal/cucumber/hooks/CommonHook.java
+ org.fundacionjala.pivotal.cucumber.hooks.CommonHook
+org/fundacionjala/pivotal/cucumber/steps/WorkspaceStep.java
+ org.fundacionjala.pivotal.cucumber.steps.WorkspaceStep
+org/fundacionjala/pivotal/cucumber/hooks/StoryHooks.java
+ org.fundacionjala.pivotal.cucumber.hooks.StoryHooks
+org/fundacionjala/pivotal/cucumber/hooks/WorkspaceHook.java
+ org.fundacionjala.pivotal.cucumber.hooks.WorkspaceHook
+org/fundacionjala/pivotal/cucumber/steps/LoginSteps.java
+ org.fundacionjala.pivotal.cucumber.steps.LoginSteps

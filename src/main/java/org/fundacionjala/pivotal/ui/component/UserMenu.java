@@ -1,6 +1,6 @@
 package org.fundacionjala.pivotal.ui.component;
 
-import org.fundacionjala.core.selenium.Interactioner;
+import org.fundacionjala.core.selenium.GuiInteractioner;
 import org.fundacionjala.pivotal.ui.pages.LoggedIn.ProfilePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,12 +13,8 @@ public class UserMenu extends BasePage {
 
 
 
-    @FindBy(xpath = "//div[@class='Dropdown__options Dropdown__options--small']/div/div/a[1]")
+    @FindBy(css = "a.Dropdown__option.selected.Dropdown__option--link")
     private WebElement profileLink;
-
-    @FindBy(xpath = "//div[@class='Dropdown__options Dropdown__options--small']"
-            + "/div/div/form/button[contains(@data-aid,'signout')]")
-    private WebElement signOutBtn;
 
     @FindBy(css = ".AvatarDetails__underlyingInitials")
     private WebElement underlyingInitials;
@@ -33,34 +29,23 @@ public class UserMenu extends BasePage {
     private WebElement detailsInitials;
 
     private void clickProfileLink() {
-        Interactioner.clickWebElement(profileLink);
-    }
-
-    private void clickSignOutBtn() {
-        Interactioner.clickWebElement(signOutBtn);
+        GuiInteractioner.clickWebElement(profileLink);
     }
 
     private String getUnderlyingInitialsAsString() {
-        return Interactioner.getTextFromWebElement(underlyingInitials);
+        return GuiInteractioner.getTextFromWebElement(underlyingInitials);
     }
 
     private String getDetailsNameAsString() {
-        return Interactioner.getTextFromWebElement(detailsName);
+        return GuiInteractioner.getTextFromWebElement(detailsName);
     }
 
     private String getDetailsUserNameAsString() {
-        return Interactioner.getTextFromWebElement(detailsUserName).replaceAll("@","");
+        return GuiInteractioner.getTextFromWebElement(detailsUserName).replaceAll("@", "");
     }
 
     private String getDetailsInitialsAsString() {
-        return Interactioner.getTextFromWebElement(detailsInitials);
-    }
-
-    /**
-     * Allows sign a user out from GUI.
-     */
-    public void signOut() {
-        clickSignOutBtn();
+        return GuiInteractioner.getTextFromWebElement(detailsInitials);
     }
 
     /**
@@ -72,6 +57,10 @@ public class UserMenu extends BasePage {
         return new ProfilePage();
     }
 
+    /**
+     * Gets all user information described in the User Dropdown Menu as a Map.
+     * @return a Map with user information contained
+     */
     public Map<String, String> getUserInformationAsMap() {
         Map userInfoMap = new HashMap<String, String>();
         userInfoMap.put("Underlying initials", getUnderlyingInitialsAsString());

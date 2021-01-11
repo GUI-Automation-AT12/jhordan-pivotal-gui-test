@@ -1,14 +1,8 @@
 package org.fundacionjala.core.utils;
 
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.UUID;
 
 public final class IdGenerator {
-
-    static DateFormat hora;
-    static Date date ;
 
     private IdGenerator() {
     }
@@ -18,8 +12,6 @@ public final class IdGenerator {
      * @return UniqueId
      */
     public static String getUniqueId() {
-        hora = new SimpleDateFormat("HHmmss");
-        date = new Date();
-        return hora.format(date);
+        return UUID.randomUUID().toString().replaceAll("-", "");
     }
 }
